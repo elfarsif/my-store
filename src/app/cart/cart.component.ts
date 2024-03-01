@@ -8,15 +8,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrl: './cart.component.css',
 })
 export class CartComponent {
-  //items = this.cartService.getItems();
-  items = [
-    {
-      id: 1,
-      name: 'Phone XL',
-      price: 799,
-      description: 'A large phone with one of the best screens',
-    },
-  ];
+  items = this.cartService.getItems();
   checkoutForm = this.formBuilder.group({
     name: '',
     address: '',
