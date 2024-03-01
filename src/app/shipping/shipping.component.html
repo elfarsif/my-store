@@ -1,0 +1,9 @@
+<h3>Shipping Prices</h3>
+
+@for(shipping of shippingCosts|async;track trackByFn){
+<div>
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
+
+}

@@ -1,5 +1,15 @@
 # MyStore
 
+This is a generic Store app using Angular.
+
+## Features
+
+
+Navigation : directly in the app.module file
+Cart service : service for handling cart functionalities, add, remove, get shipping prices
+Reactive Forms: form builders for user input
+Bootstrap: used for layout and styling
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
 ## Development server

@@ -1,8 +1,27 @@
-<h3>Cart</h3>
+<h3 class="my-3">Cart</h3>
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
 
 @for(item of items;track item.id){
-<div>
+<div class="d-flex justify-content-between bg-dark-subtle p-3 my-3">
   <span>{{ item.name }}</span
   ><span>{{ item.price | currency }}</span>
 </div>
 }
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div class="my-1">
+    <div>
+      <label for="name">Name</label>
+    </div>
+    <input type="text" formControlName="name" id="name" />
+  </div>
+  <div>
+    <div>
+      <label for="address">Address</label>
+    </div>
+    <input type="text" formControlName="address" id="address" />
+  </div>
+  <button class="btn btn-outline-primary mt-3" type="submit">Purchase</button>
+</form>
